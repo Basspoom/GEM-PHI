@@ -1,0 +1,53 @@
+# --- config.yml ---
+# 1. Essential Paths
+paths:
+  # Base path for datasets and graph info
+  base_path: '/your/path/to/GEM-PHI/db/'
+
+  stats_path: '/your/path/to/GEM-PHI/db/graph/norm_stats_combined.pt'
+  graph_path: '/your/path/to/GEM-PHI/db/graph/Train_hetero.pt'
+  id_map_path: '/your/path/to/GEM-PHI/db/graph/id_maps.pt'
+
+  ref_nodes_file: '/your/path/to/GEM-PHI/db/refnode.pkl'
+  ref_16s_file: '/your/path/to/GEM-PHI/db/all_hosts_16S.fasta'
+
+
+  # Path to the GEM-PHI model and its trained weights
+  gemphi_project_path: '/your/path/to/GEM-PHI'
+  model_path: '/your/path/to/GEM-PHI/tools/gemphi.pt'
+
+  # Path to the preprocessing models
+  nt_model_dir: '/your/path/to/GEM-PHI/tools/NT-500M'
+  rbp_detect_model_dir: '/your/path/to/GEM-PHI/tools/RBPdetect_v4_ESMfine'
+  rbp_embed_model_dir: '/your/path/to/GEM-PHI/tools/BiooBang/Bioobang1.0'
+  
+  # CRISPRCasFinder paths
+  ccf_script: '/your/path/to/GEM-PHI/tools/CRISPRCasFinder/CRISPRCasFinder.pl'
+  ccf_so: '/your/path/to/GEM-PHI/tools/CRISPRCasFinder/sel392v2.so'
+
+# 2. Model Hyperparameters
+model_params:
+  d_model: 512
+  num_hgt_layers: 2
+  edge_feat_dim: 11
+  edge_hidden_dim: 128
+  edge_out_dim: 64
+  tower_hidden_dim: 256
+  tower_out_dim: 128
+  dropout_rate: 0.3
+
+# 3. Other Settings
+prediction:
+  confidence_threshold: 9.1226156e-07
+  batch_size: 512 
+
+ablation_tricks:
+  NODE_FUSION_SIMPLIFIED: False
+  EDGE_PROJECTOR_SIMPLIFIED: False
+  NO_HGT_RESIDUAL: False
+  NO_SIMILARITY_EDGES: False
+
+environments:
+  node_features: "GEM-PHI_nodes"
+  edge_features: "GEM-PHI_edges"
+  inference: "GEM-PHI"
