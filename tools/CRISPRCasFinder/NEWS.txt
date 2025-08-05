@@ -1,0 +1,61 @@
+## News from latest version of CRISPRCasFinder (version 4.3.2)
+
+# Change #1
+# CRISPR arrays having one to three spacers will now be rated with evidence-level 4 if their consensus repeat matched with a level 4 CRISPR array's consensus repeat (from the same studied sequence).
+# The new definition for evidence-levels is now:
+# - Level 1 indicates CRISPR-like arrays having 3 spacers or less,
+# - Level 2 indicates CRISPR arrays having an entropy-based conservation (EBcons) of repeats lower than 70.
+# - Level 3 indicates CRISPR arrays having a EBcons of repeats greater or equal to 70, and a spacer conservation (BioPerl’s overall percentage identity) greater than 8%,
+# - Level 4 indicates CRISPR arrays having a EBcons of repeats greater or equal to 70, and a spacer conservation (BioPerl’s overall percentage identity) lower than 8%. Please note that CRISPR-like arrays having 3 spacers or less will be rated with level 4 if their consensus repeat matched with a formal level 4 CRISPR array's consensus repeat.
+
+# Change #2  
+# In CRISPRCasFinder version 4.2.19, MacSyFinder will not be launched to search Cas proteins if no CDS was detected.
+# This improvement allows to avoid MacSyFinder's "RuntimeError".
+
+# Change #3
+# Installation procedures have been added for CentOS and Fedora operating systems.
+
+# Change #4
+# In CRISPRCasFinder version 4.2.20, the following modifications have been done:
+# - The error concerning the analysis of multifasta file has been fixed. This error was due to a bad management of the launching of MacSyFinder/CasFinder 
+#   when no CDS was detected in a sequence found in the multifasta.
+# - CasFinder version 2.0.3 (the most recent updated version of CasFinder) has been added to the repository.
+#   Please also note that path names to Cas definitions and profiles have been modified in order to fix the issue concerning detection of cas genes.
+#   The former CasFinder-2.0.2 folder has been removed.
+# - Please note that the "-rcfowce" option used in the online version of CRISPRCasFinder may produce different results as compared to the command line version of the tool, 
+#   because this option ("-rcfowce") allows users to run CasFinder only when a CRISPR locus has been detected. 
+#   The version of the dependent software (such as EMBOSS) may also cause slight differences.
+#   The command line used during an analysis can be visualized in the result JSON file.
+# - Please note that the Singularity image corresponding to the current version of the tool has not yet been updated.
+# - Please note that this version of CasFinder (2.0.3) does not correspond to the last update 
+#   (Makarova et al., 2020 ; https://doi.org/10.1038/s41579-019-0299-x). This change will be performed soon thanks to colleagues from 
+#   Institut Pasteur in Paris. Thank you for your patience.
+
+# Change #5
+# Please note that a new singularity container is available and  hosted at the Download page of the CRISPR-Cas++ portal (https://crisprcas.i2bc.paris-saclay.fr/Home/Download)
+
+# Change #6
+# Please note that in the former installer bash files, the path corresponding to MacSyFinder version 1.0.5 was: https://github.com/gem-pasteur/macsyfinder/archive/refs/tags/macsyfinder-1.0.5.tar.gz
+
+# Change #7
+# Please note that a new version of CRISPRCasFinder is in development (version 4.3.1) using MacSyFinder version 2.0 (https://github.com/gem-pasteur/macsyfinder) and CASFinder version 3.1.0.
+# You can use conda/mamba to install the new version of MacSyFinder and corresponding CASFinder version.
+# Example of command lines to install the new version of MacSyFinder/CASFinder:
+conda install -c conda-forge mamba
+mamba install -c bioconda macsyfinder=2.0
+macsydata install -u CASFinder==3.1.0
+conda install -c bioconda perl-bioperl-core
+# Please use a conda environment when running the code (several tests are in progress)
+# Note that following Perl modules are no more needed: JSON::Parse, Date::Calc, Unix::Sysexits
+# Please note that you will need to first install conda and activate it to run the new bash installer files
+# Note that former CasFinder folder ("CasFinder-2.0.3") is no more needed in CRISPRCasFinder version 4.3.1
+
+# Change #8
+# Please note that some changes have been applied to CRISPRCasFinder (version 4.3.2). As version 4.3.1, this version also use MacSyFinder version 2.0
+# Note that a new installation has been added to run the programme through a conda/mamba environment (instructions are provided in the README file)
+# Note that CRISPRCasFinder vers 4.3.2 need MUSCLE version 5.1 in order to work properly. Otherwise, you will need to modify the CRISPRCasFinder.pl file
+# indeed, the new version of MUSCLE can be run using the following command: "muscle -align <inputfile> -output <outputfile>"
+# instead of the former command: "muscle -in <inputfile> -out <outputfile>"
+# Furthermore, this new version of CCF still need "sel392v2.so" file to work (a Linux Ubuntu version of this file is provided in the GitHub repository),
+# if needed, "sel392v2.so" file could be generated from other operating systems following Vmatch documentation/installation (http://www.vmatch.de/)
+

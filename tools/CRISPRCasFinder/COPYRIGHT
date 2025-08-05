@@ -1,0 +1,43 @@
+CRISPRCasFinder allows to find CRISPR arrays as well as associated cas genes.
+
+Copyright (C) 2017- CRISPR-Cas++ team (CNRS, Université Paris-Saclay, Institut Pasteur, Université de Lille).
+------------------------------------------------------------------
+
+Citation: 
+Couvin D, Bernheim A, Toffano-Nioche C, Touchon M, Michalik J, Néron B, Rocha EPC, Vergnaud G, Gautheret D, Pourcel C. 
+CRISPRCasFinder, an update of CRISRFinder, includes a portable version, enhanced performance and integrates search for Cas proteins. 
+Nucleic Acids Res. 2018 Jul 2;46(W1):W246-W251. DOI: https://doi.org/10.1093/nar/gky425
+------------------------------------------------------------------
+
+All the contributors of the program are: 
+David Couvin,
+Aude Bernheim,
+Claire Toffano-Nioche,
+Marie Touchon,
+Bertrand Néron,
+Christine Drevet,
+Luis M. Rodriguez,
+Lee S. Katz,
+Juraj Michalik,
+Fabrice Leclerc,
+Cyrille Petat,
+Arnaud Martel,
+Nicolas Villeriot.
+
+-----------------------------------------------------------------
+The source code of CRISPRCasFinder is distributed 
+under the terms of the GNU GeneralPublic License. 
+See the file COPYING for details.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
