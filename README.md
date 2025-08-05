@@ -1,7 +1,7 @@
 <div align="center">
 
 
-![gem-phi](GEM-PHI.jpg)
+![gem-phi](GEM-PHI_logo.jpg)
 
 ![biorxiv](https://img.shields.io/badge/bioRxiv-preprint-yellow.svg)
 ![HuggingFace Hub](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-red)
@@ -20,6 +20,7 @@
   - [Quick Start](#quick-start)
     - [Command Template](#command-template)
     - [Run Example](#run-example)
+  - [GEM-PHI Design](#GEM-PHI-design)
   - [Evaluation Results](#evaluation-results)
   - [Citing this work](#citing-this-work)
   - [Author Contributions](#author-contributions)
@@ -141,6 +142,8 @@ python ./bin/run_all.py \
   --device 0
 ```
 
+## GEM-PHI Design
+![gem-phi-design](GEM-PHI.jpg)
 
 
 
@@ -178,3 +181,4 @@ Heng-rui Zhao was responsible for emotional support! 🥰
 We are honored to help you if you have any questions. Please feel free to open an issue or contact us directly. Hope our code helps and look forward to your citations.
 
 [basspoom@mail.ustc.edu.cn] | [zhr123456@mail.ustc.edu.cn].
+
