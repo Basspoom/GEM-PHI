@@ -42,8 +42,8 @@ The **GEM-PHI (Graph-Embedded Multimodal learning for Phage-Host Interaction)** 
 ### Clone the source code
 
 ```bash
-git clone git@202.38.92.250:source-code/gem-phi.git
-cd gem-phi
+git clone https://github.com/Basspoom/GEM-PHI.git
+cd GEM-PHI
 ```
 
 
@@ -181,4 +181,5 @@ Heng-rui Zhao was responsible for emotional support! 🥰
 We are honored to help you if you have any questions. Please feel free to open an issue or contact us directly. Hope our code helps and look forward to your citations.
 
 [basspoom@mail.ustc.edu.cn] | [zhr123456@mail.ustc.edu.cn].
+
 
